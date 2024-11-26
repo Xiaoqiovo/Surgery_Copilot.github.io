@@ -1,265 +1,251 @@
-# SITE SETUP
-# Documentation: https://sourcethemes.com/academic/
+[ananke.social]
+icon_path = "ananke/socials/%s.svg"
 
-############################
-## Theme
-############################
+[ananke.social.follow]
+new_window_icon = false # show a little "opens in new window" icon next to the link
+# add networks to this list in your local config to enable them, remove them to disable them.
+# networks = [
+#   "facebook",
+#   "bluesky",
+#   "linkedin"
+# ]
 
-# Choose a theme.
-#   Latest themes (may require updating): https://sourcethemes.com/academic/themes/
-#   Browse built-in themes in `themes/academic/data/themes/`
-#   Browse user installed themes in `data/themes/`
-theme = "minimal"
+[ananke.social.share]
+icons = true # show icons for each share link
+sharetext = true # show the share text
+# add networks to this list in your local config to enable them, remove them to disable them.
+# networks = [
+#   "email",
+#   "facebook",
+#   "bluesky",
+#   "linkedin"
+# ]
 
-# Enable users to switch between day and night mode?
-day_night = true
+# social media network setups
+[[ananke.social.networks]]
+slug = "bluesky"
+label = "Bluesky"
+color = "#1185fe"
+profile = "https://bsky.app/profile/%s"
+icon = "bluesky" # font awesome brand icon name
+link = "https://bsky.app/intent/compose"
+[ananke.social.networks.particles]
+text = "permalink"
 
-# Override the theme's font set (optional).
-#   Latest font sets (may require updating): https://sourcethemes.com/academic/themes/
-#   Browse built-in font sets in `themes/academic/data/fonts/`
-#   Browse user installed font sets in `data/fonts/`
-font = ""
+[[ananke.social.networks]]
+slug = "email"
+label = "Email"
+profile = false
+icon = "envelope" # font awesome free icon name
+link = "mailto:"
+[ananke.social.networks.particles]
+body = "permalink"
+subject = "title"
 
-# Choose a font size.
-# Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
-font_size = "M"
+[[ananke.social.networks]]
+slug = "facebook"
+label = "Facebook"
+color = "#3b5998"
+profile = "https://www.facebook.com/%s"
+icon = "facebook" # font awesome brand icon name
+link = "https://facebook.com/sharer/sharer.php"
+[ananke.social.networks.particles]
+u = "permalink"
 
-############################
-## Basic Info
-############################
+[[ananke.social.networks]]
+slug = "github"
+label = "GitHub"
+color = "#6cc644"
+profile = "https://github.com/%s/"
+icon = "github" # font awesome brand icon name
 
-# Website type
-#   Improve how search engines understand your site.
-#   For personal sites, choose "Person".
-#   For organizations and projects, choose from https://schema.org/Organization#subtypes
-#   E.g. Person, Organization, LocalBusiness, Project, EducationalOrganization
-site_type = "Person"
+[[ananke.social.networks]]
+slug = "gitlab"
+label = "GitLab"
+color = "#FC6D26"
+profile = "https://gitlab.com/%s/"
+icon = "gitlab" # font awesome brand icon name
 
-# Local business type (optional)
-# If you entered "LocalBusiness" above, choose the type of business from https://schema.org/LocalBusiness#subtypes
-local_business_type = ""
+[[ananke.social.networks]]
+slug = "hackernews"
+label = "Hacker News"
+color = "#ff4000"
+profile = "https://news.ycombinator.com/user?id=%s"
+icon = "hacker-news" # font awesome brand icon name
+link = "https://news.ycombinator.com/submitlink"
+[ananke.social.networks.particles]
+u = "permalink"
+t = "description"
 
-# Organization name (optional)
-# Enter an organization or project name. Defaults to the site title from `config.toml`.
-org_name = ""
+[[ananke.social.networks]]
+slug = "instagram"
+label = "Instagram"
+color = "#e1306c"
+profile = "https://www.instagram.com/%s/"
+icon = "instagram" # font awesome brand icon name
 
-# Description for social sharing and search engines. If undefined, superuser role is used in place.
-description = ""
+[[ananke.social.networks]]
+slug = "keybase"
+label = "Keybase"
+color = "#3d76ff"
+profile = "https://keybase.io/%s"
+icon = "keybase" # font awesome brand icon name
 
-# Display a logo in navigation bar rather than title (optional).
-#   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
-logo = ""
+[[ananke.social.networks]]
+slug = "linkedin"
+label = "LinkedIn"
+color = "#0077b5"
+profile = "http://linkedin.com/in/%s"
+icon = "linkedin" # font awesome brand icon name
+link = "https://www.linkedin.com/shareArticle"
+[ananke.social.networks.particles]
+url = "permalink"
+title = "title"
+summary = "description"
+source = "permalink"
+params = "mini=true"
 
-############################
-## Site Features
-############################
+[[ananke.social.networks]]
+slug = "medium"
+label = "Medium"
+color = "#0077b5"
+profile = "https://medium.com/@%s/"
+icon = "medium" # font awesome brand icon name
 
-# Enable source code highlighting? true/false
-# Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
-highlight = true
-highlight_languages = ["r"]  # Add support for highlighting additional languages
-# highlight_style = "github"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
+[[ananke.social.networks]]
+slug = "mastodon"
+label = "Mastodon"
+color = "#6364FF"
+profile = ""
+icon = "mastodon" # font awesome brand icon name
 
-# Enable LaTeX math rendering? true/false
-#   If false, you can enable math on a per page basis as needed.
-math = false
+[[ananke.social.networks]]
+slug = "pinterest"
+label = "Pinterest"
+color = "#e60023"
+profile = "https://www.pinterest.com/%s/"
+icon = "pinterest" # font awesome brand icon name
+link = "https://pinterest.com/pin/create/button/"
+[ananke.social.networks.particles]
+url = "permalink"
+media = "permalink"
+description = "description"
 
-# Enable diagram rendering? true/false
-#   If false, you can enable diagrams on a per page basis as needed.
-diagram = false
+[[ananke.social.networks]]
+slug = "reddit"
+label = "Reddit"
+color = "#ff4500"
+profile = "https://www.reddit.com/user/%s/"
+icon = "reddit" # font awesome brand icon name
+link = "https://reddit.com/submit/"
+[ananke.social.networks.particles]
+url = "permalink"
+title = "title"
+params = "resubmit=true"
 
-# Privacy pack
-#   Show a cookie consent message to visitors
-#   Anonymize IP in Google Analytics (if enabled)
-privacy_pack = false
+[[ananke.social.networks]]
+slug = "rss"
+label = "RSS"
+color = "#ff6f1a"
+profile = ""
+icon = "rss" # font awesome free icon name
 
-# Enable visitors to edit pages?
-#   `repo` defines the repository URL. `editable` defines which page types can be edited.
-edit_page = {repo_url = "https://github.com/gcushen/hugo-academic", content_dir = "", repo_branch = "master", editable = {docs = true, page = false, post = false}}
+[[ananke.social.networks]]
+slug = "slack"
+label = "Slack"
+color = "#E01E5A"
+profile = ""
+icon = "slack" # font awesome brand icon name
 
-############################
-## Contact details
-##
-## These details power the Contact widget (if enabled).
-## Additionally, for organizations, these details may be used to enrich search engine results.
-############################
+[[ananke.social.networks]]
+slug = "stackoverflow"
+label = "Stack Overflow"
+color = "#f48024"
+profile = "https://stackoverflow.com/users/%s"
+icon = "stack-overflow" # font awesome brand icon name
 
-# Enter contact details (optional). To hide a field, clear it to "".
-email = "test@example.org"
-phone = "888 888 88 88"
+[[ananke.social.networks]]
+slug = "telegram"
+label = "Telegram"
+color = "#0088cc"
+profile = "https://t.me/%s"
+icon = "telegram" # font awesome brand icon name
+link = "https://telegram.me/share/url"
+[ananke.social.networks.particles]
+text = "description"
+url = "permalink"
 
-# Address
-# For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "450 Serra Mall", city = "Stanford", region = "CA", postcode = "94305", country = "United States", country_code = "US"}
+[[ananke.social.networks]]
+slug = "tiktok"
+label = "TikTok"
+color = "#fe2c55"
+profile = "https://www.tiktok.com/@%s"
+icon = "tiktok" # font awesome brand icon name
 
-# Geographic coordinates
-# To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "37.4275", longitude = "-122.1697"}
+[[ananke.social.networks]]
+slug = "tumblr"
+label = "Tumblr"
+color = "#35465c"
+profile = "https://www.tumblr.com/blog/%s"
+icon = "tumblr" # font awesome brand icon name
+link = "https://www.tumblr.com/widgets/share/tool"
+[ananke.social.networks.particles]
+canonicalUrl = "permalink"
+shareSource = "source"
+title = "title"
+caption = "description"
+content = "description"
+params = "posttype=link"
 
-# Directions for visitors to locate you.
-directions = "Enter Building 1 and take the stairs to Office 200 on Floor 2"
+[[ananke.social.networks]]
+slug = "twitter"
+label = "Twitter"
+color = "#1da1f2"
+profile = "https://twitter.com/%s"
+icon = "twitter" # font awesome brand icon name
+link = "https://twitter.com/intent/tweet/"
+[ananke.social.networks.particles]
+text = "description"
+url = "permalink"
 
-# Office hours
-# A list of your office hours. To remove, set to an empty list `[]`.
-office_hours = ["Monday 10:00 to 13:00", "Wednesday 09:00 to 10:00"]
+[[ananke.social.networks]]
+slug = "whatsapp"
+label = "WhatsApp"
+color = "#25d366"
+profile = false
+icon = "whatsapp" # font awesome brand icon name
+link = "whatsapp://send"
+linkintext = true
+[ananke.social.networks.particles]
+text = "description"
 
-# Enter an optional link for booking appointments (e.g. calendly.com).
-appointment_url = "https://calendly.com"
+[[ananke.social.networks]]
+slug = "xing"
+label = "Xing"
+color = "#026466"
+profile = "https://www.xing.com/profile/%s"
+icon = "xing" # font awesome brand icon name
+link = "https://www.xing.com/app/user"
+separator = ";"
+[ananke.social.networks.particles]
+url = "permalink"
+title = "title"
+params = "op=share"
 
-# Contact links
-#   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
-contact_links = [
-  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/Twitter"},
-  {icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
-  {icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
-  {icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
-  # {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/@Telegram"},
-  ]
+[[ananke.social.networks]]
+slug = "x-twitter"
+label = "X"
+color = "#000000"
+profile = "https://x.com/%s"
+icon = "x-twitter" # font awesome brand icon name
+link = "https://twitter.com/intent/tweet/"
+[ananke.social.networks.particles]
+text = "description"
+url = "permalink"
 
-############################
-## Social
-############################
-
-# Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
-sharing_image = ""
-
-# Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter = ""
-
-############################
-## Regional Settings
-############################
-
-# Date and time format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
-#   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-date_format = "Jan 2, 2006"
-#   Examples: "3:04 pm" or "15:04"
-time_format = "3:04 PM"
-
-# Address format (choose from the [address_formats] list below or add you own to the list).
-address_format = "en-us"
-
-############################
-## Advanced
-############################
-
-# Get user avatars from Gravatar.com? (true/false)
-gravatar = false
-
-# Main menu alignment (l = left, c = center, r = right) and logo options.
-main_menu = {align = "l", show_logo = true}
-
-# Show estimated reading time for posts? (true/false)
-reading_time = true
-
-# Display next/previous section pager? (true/false)
-section_pager = false
-docs_section_pager = true  # Display pager in Docs layout (e.g. tutorials)?
-
-# Enable in-built social sharing buttons? (true/false)
-sharing = true
-
-# Link authors to their profile page? (true/false)
-link_authors = true
-
-# Load JS plugins
-#   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
-plugins_js  = []
-
-# Available address formats.
-[address_formats]
-  en-us = {order = ['street', 'city', 'region', 'postcode'], delimiters = [', ', ', ', ' ', '']}
-  en-gb = {order = ['street', 'city', 'region', 'postcode'], delimiters = [', ', ', ', ', ', '']}
-  de = {order = ['street', 'postcode', 'city'], delimiters = [', ', ' ', '']}
-  fr-fr = {order = ['street', 'postcode', 'city'], delimiters = ['<br>', ' ', '']}
-  zh = {order = ['postcode', 'region', 'city', 'street'], delimiters = [' ', ' ', ' ', '']}
-
-# Configuration of publication pages.
-[publications]
-  # Date format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
-  #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-  date_format = "January 2006"
-
-  # Citation style ("apa" or "mla")
-  citation_style = "apa"
-
-# Configuration of project pages.
-[projects]
-  # Views for associated content.
-  #   1: List
-  #   2: Compact
-  #   3: Card
-  #   4: Citation (publications only)
-  post_view = 2
-  publication_view = 2
-  talk_view = 2
-
-############################
-## Comments
-############################
-[comments]
-  # Comment provider:
-  #   0: Disabled
-  #   1: Disqus (https://disqus.com)
-  #   2: Commento (https://commento.io)
-  engine = 0
-
-  # Which page types are commentable?
-  commentable = {page = true, post = true, docs = true, project = true, publication = true, talk = true}
-
-  # Configuration of Disqus.
-  [comments.disqus]
-    shortname = ""  # Paste the shortname from your Disqus dashboard.
-    show_count = true  # Show comment count in page header? (true/false)
-
-  # Configuration of Commento.
-  [comments.commento]
-    # If self-hosting Commento, enter its URL here (e.g. "https://commento.?.com"), otherwise leave empty.
-    url = ""
-
-############################
-## Search
-############################
-[search]
-  # Search provider:
-  #   0: No search engine
-  #   1: Academic (built-in)
-  #   2: Algolia (https://www.algolia.com)
-  engine = 1
-
-  # Configuration of Algolia search engine.
-  # Paste the values from your Algolia dashboard.
-  [search.algolia]
-    app_id = ""
-    api_key = ""
-    index_name = ""
-    show_logo = false
-
-############################
-## Maps
-############################
-[map]
-  # To show your address on a map in the Contact widget, enter your latitude and longitude (above)
-  # and choose a map provider below.
-  #
-  # To use Google Maps, set `engine` to 1 and enter your API key that can be obtained here:
-  #   https://developers.google.com/maps/documentation/javascript/get-api-key
-  # To use OpenStreetMap tiles, set `engine` to 2.
-  # To use OpenStreetMap on a high traffic site, set `engine` to 3 and enter your API key that can be obtained here:
-  #   https://www.mapbox.com/studio/account/tokens
-  #
-  # Map provider:
-  #   0: No map
-  #   1: Google Maps
-  #   2: OpenStreetMap (Mapnik)
-  #   3: OpenStreetMap (Mapbox)
-  engine = 2
-  api_key = ""
-  zoom = 15
-
-############################
-## Marketing
-############################
-[marketing]
-  google_analytics = ""
-  google_tag_manager = ""
+[[ananke.social.networks]]
+slug = "youtube"
+label = "YouTube"
+color = "#cd201f"
+profile = "https://www.youtube.com/@%s"
+icon = "youtube" # font awesome brand icon name
