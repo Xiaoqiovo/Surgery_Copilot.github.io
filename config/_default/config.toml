@@ -1,71 +1,71 @@
-# Configuration of Academic
-# Documentation: https://sourcethemes.com/academic/
-#
-# This file is formatted using TOML syntax - learn more at https://learnxinyminutes.com/docs/toml/
-# Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
+title = "Notre-Dame de Paris"
+baseURL = "https://gohugo-theme-ananke.pages.dev"
+theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+resourceDir = "../resources"
 
-# Title of your site
-title = "Homepage"
-
-# The URL of your site.
-# End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "http://Surgery_Copilot.github.io"
-
-# Enter a copyright notice to display in the site footer.
-# To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
-copyright = ""
-
-############################
-## Advanced options below ##
-############################
-
-# Name of Academic theme folder in `themes/`.
-theme = "ananke"
-
-# Get last modified date for content from Git?
-enableGitInfo = false
-
-# Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
-hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
-defaultContentLanguageInSubdir = false
-removePathAccents = true  # Workaround for https://github.com/gohugoio/hugo/issues/5687
+sectionPagesMenu = "main"
+enableRobotsTXT = true
 
-paginate = 10  # Number of items per page in paginated lists.
-enableEmoji = true
-footnotereturnlinkcontents = "<sup>^</sup>"
-ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+[services.googleAnalytics]
+id = ''
 
-[outputs]
-  home = [ "HTML", "RSS", "JSON", "WebAppManifest" ]
-  section = [ "HTML", "RSS" ]
+[pagination]
+pagerSize = 3 # this is set low for demonstrating with dummy content. Set to a higher number
 
-[mediaTypes."application/manifest+json"]
-  suffixes = ["webmanifest"]
+[languages.en]
+contentDir = "content/en"
+languageCode = 'en-US'
+weight = 1
+title = "Ananke"
+# languageDirection = 'rtl' for Right-To-Left languages
 
-[outputFormats.WebAppManifest]
-  mediaType = "application/manifest+json"
-  rel = "manifest"
+[languages.fr]
+contentDir = "content/fr"
+languageCode = 'fr-FR'
+weight = 2
+title = "Ananke Fr"
 
-[markup]
-  defaultMarkdownHandler = "goldmark"
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true  # Enable user to embed HTML snippets in Markdown content.
-  [markup.highlight]
-    codeFences = false  # Disable Hugo's code highlighter as it conflicts with Academic's highligher.
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel = 3
+[sitemap]
+changefreq = "monthly"
+priority = 0.5
+filename = "sitemap.xml"
 
-[imaging]
-  resampleFilter = "lanczos"
-  quality = 90
-  anchor = "smart"  # Anchor for cropping. Options include Smart and Center.
+[params]
+text_color = ""
+author = ""
+favicon = ""
+site_logo = ""
+description = "The last theme you'll ever need. Maybe."
+# choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+background_color_class = "bg-black"
+# choose fitting and alignment styles for the featured image using Tachyons classes such as "cover|contain" for fitting and "bg-top|bg-center|bg-bottom" for alignment, or add any other class space-separated to customize further
+featured_image_class = "cover bg-top"
+# choose a color dimming class for the page or site header from any on this page: https://tachyons.io/docs/themes/skins/, preface it with "bg-" and add the value such as "-X0" where X is in [1,9]
+cover_dimming_class = "bg-black-60"
+recent_posts_number = 3
 
-# Taxonomies.
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-  publication_type = "publication_types"
-  author = "authors"
+[params.ananke.social.share]
+networks = [
+  "email",
+  "facebook",
+  "bluesky",
+  "linkedin"
+]
+
+[params.ananke.social.follow]
+networks = [
+  "facebook",
+  "bluesky",
+  "linkedin"
+]
+
+[params.ananke.social.facebook]
+username = "patrick.kollitsch"
+# profilelink = "https://www.facebook.com/patrick.kollitsch"
+
+[params.ananke.social.linkedin]
+username = "patrickkollitsch"
+
+[params.ananke.social.bluesky]
+username = "kollitsch.dev"
