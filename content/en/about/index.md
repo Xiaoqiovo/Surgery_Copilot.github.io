@@ -1,7 +1,7 @@
 ---
 title: "About"
 description: "The perfect collaboration of precise surgical instruments and intelligent systems, and the deep integration of real-time multimodal data analysis and clinical experience, allow every surgical decision to be based on unprecedented precise insights. Surgery Copilot, as a new generation of intelligent surgical assistant, is the realiser of this vision. ————Xiaoqi"
-featured_image: '/images/Victor_Hugo-Hunchback.jpg'
+featured_image: '/images/1.jpg'
 menu:
   main:
     weight: 1
