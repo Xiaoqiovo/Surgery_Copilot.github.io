@@ -6,7 +6,7 @@ menu:
   main:
     weight: 1
 ---
-{{< figure src="/images/Victor_Hugo-Hunchback.jpg" title="AI-Powered Surgical Assistance Systems and Human-Machine Collaboration" >}}
+{{< figure src="/images/about_icon.webp" title="AI-Powered Surgical Assistance Systems and Human-Machine Collaboration" >}}
 
 In the contemporary medical system, surgery faces unprecedented challenges and opportunities. With the popularization of minimally invasive technology and robotic surgery, surgical operations have become more sophisticated, and the technical requirements for doctors are constantly increasing. However, surgeons still face many pain points in clinical practice: high pressure for real-time decision-making during surgery, lack of standardized quantitative indicators during the surgical process, difficulty in inheriting complex case experience, and low efficiency of surgical teaching. Especially in minimally invasive surgeries such as laparoscopy, due to limited field of view and delicate instrument operation, higher requirements are placed on the surgeon.
 
