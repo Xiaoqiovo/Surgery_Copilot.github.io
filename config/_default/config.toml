@@ -17,7 +17,7 @@ pagerSize = 5 # this is set low for demonstrating with dummy content. Set to a h
 contentDir = "content/en"
 languageCode = 'en-US'
 weight = 1
-title = "Homepage"
+title = "Surgery Copilot.AI"
 # languageDirection = 'rtl' for Right-To-Left languages
 
 [languages.fr]
